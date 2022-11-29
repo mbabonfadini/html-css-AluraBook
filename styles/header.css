@@ -1,0 +1,173 @@
+.headerSandwichMenu {
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/sandwichMenu.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.header{
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.headerTitle {
+    display: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.containerImg {
+    padding: 1em;}
+
+.listMenu {
+    display: none;
+    position: absolute;
+    top: 100%;  
+    width: 60vw;  
+}
+
+
+
+.containerButton:checked~.containerLabel>.headerSandwichMenu {
+    background-image: url(../img/whiteLogo.svg);
+}
+
+.containerButton:checked~.containerLabel {
+    background: var(--blue-gradient);
+}
+
+.containerButton:checked~.listMenu {
+    display: block;
+    
+}
+
+.listMenuTitle, .listMenuIten {
+    padding: 1em;
+    background-color: var(--white);
+}
+
+.listMenuTitle {
+    color: var(--word-detail-color);
+    font-weight: 700;
+
+}
+
+.listMenuLink {
+    background: var(--blue-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.listMenuLink:hover {
+    color: var(--white);
+    background: var(--blue-gradient);
+    
+
+}
+.containerButton {
+    display: none;
+}
+
+.containerTitle {
+    display: none;
+}
+
+.deskview {
+    display: none;
+}
+
+.containerText {
+    display: none;
+}
+
+@media screen and (min-width:1024px) {
+    .containerTitle {
+        display: block;
+        font-size: 30px;
+        color: black;
+        font-weight: 400;
+        font-family: var(--second-font);
+    }
+
+    .containerTitleBlack {
+        font-weight: 700;
+        font-family: var(--second-font);
+    }
+    .headerSandwichMenu {
+        display: none;
+        
+    }
+
+    .deskview {
+        display: block;
+    }
+
+    .deskviewLink {
+        text-transform: uppercase;
+        color: var(--blue-gradient);
+        text-decoration: none;
+        padding: 2em;
+        
+    }
+
+    .mobileView {
+        display: none;
+    }
+
+    .header {
+        justify-content: space-between;
+    }
+
+    .listMenu{
+        width: auto;
+    }
+
+    .containerButton:checked ~.deskviewLinkCategoric{
+        color: var(--white);
+        background: var(--blue-gradient);
+    }
+
+    .listMenuIten:hover {
+        background: var(--blue-gradient);
+    }
+
+    .listMenuIten:hover > .listMenuLink {
+        -webkit-text-fill-color: var(--white);
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width:1728px) {
+    .header {
+        justify-content: space-between;
+        padding: 0 4em;
+    }
+    .containerText {
+        display: block;
+        font-size: 20px;
+    }
+     
+    .containerLink {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    .options {
+        margin: 0 auto 0 4em;
+
+    }
+    
+}

@@ -1,0 +1,64 @@
+.banner {
+    background: var(--blue-gradient);
+    color: var(--white);
+    text-align: center;
+    padding: 2.5em 2em;
+}
+
+.bannerTitle {
+    font-size: 18px;
+    font-weight: 700;}
+
+.bannerText {
+    font-weight: 500;
+    margin: 1em 0;
+}
+
+.bannerSearch {
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    border-radius: 24px;
+    padding: 1em;
+    width: 100%;
+}
+
+.bannerSearch::placeholder {
+    font-size: 14px;
+    font-family: var(--font-standart);
+    font-weight: 400;
+    color: var(--white);
+    text-align: center;
+    background: url("../img/magnifier.svg");
+    background-repeat: no-repeat;
+    background-position: 1em;
+}
+
+@media screen and (min-width:1024px) {
+    
+    .bannerTitle {
+        font-size: 36px;}
+    
+    .bannerSearch {
+        width: 50%;
+    }
+    
+    .bannerSearch::placeholder {
+        background-position:5em;
+    }
+}
+
+@media screen and (min-width:1728px) {
+    
+    .bannerSearch {
+        width: 35%;
+    }
+
+    .bannerSearch::placeholder {
+        background-position: 10em;
+    }
+
+    .banner {
+        padding: 6em 0
+    }
+}
